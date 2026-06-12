@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import plotly.express as px
-from tensorflow.keras.models import load_model
+
 
 # --------------------------------------------------
 # PAGE CONFIG
@@ -21,7 +21,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_artifacts():
-    model = load_model("models/weather_rnn.h5")
+    
     scaler = joblib.load("models/scaler.pkl")
     return model, scaler
 
