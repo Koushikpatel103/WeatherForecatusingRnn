@@ -21,7 +21,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_artifacts():
-    model = load_model("models/weather_lstm.h5")
+    model = load_model("models/weather_rnn.h5")
     scaler = joblib.load("models/scaler.pkl")
     return model, scaler
 
